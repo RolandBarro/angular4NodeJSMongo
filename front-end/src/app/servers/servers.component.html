@@ -1,2 +1,20 @@
-<app-server></app-server>
-<app-server></app-server>
+<div class="col-sm-4"></div>
+<div class="col-sm-4">
+	<div>
+		<input type="text"
+			class="form-control"
+			[(ngModel)] = "serverName">	
+	</div>	
+	<div>
+		<button class="btn btn-primary"
+			[disabled]="!allowNewServer"
+			(click)="onAddNewServer()">Add Server</button>	
+	</div>
+	<p>{{addServerMessage}}</p>
+	<app-server></app-server>
+</div>
+<div class="col-sm-4">
+	
+</div>
+<div class="col-sm-12"></div>
+
