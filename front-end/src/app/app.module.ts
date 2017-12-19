@@ -8,6 +8,7 @@ import { ServerComponent } from './server/server.component';
 import { ServersComponent } from './servers/servers.component';
 import { WarningMessageComponent } from './warning.message/warning.message.component';
 import { SuccessMessageComponent } from './success.message/success.message.component';
+import { SimpleLoginComponent } from './simple-login/simple-login.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { SuccessMessageComponent } from './success.message/success.message.compo
     ServerComponent,
     ServersComponent,
     WarningMessageComponent,
-    SuccessMessageComponent
+    SuccessMessageComponent,
+    SimpleLoginComponent
   ],
   imports: [
     BrowserModule,

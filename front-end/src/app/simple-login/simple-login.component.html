@@ -1,0 +1,23 @@
+<div class="panel panel-primary">
+	<div class="panel-heading">Login Form</div>
+	<div class="panel-body">
+		<input type="text" 
+			class="form-control"
+			[(ngModel)]="formData.userName"
+			(input)="checkInput()">
+		<input type="password" 
+			class="form-control"
+			[(ngModel)]="formData.password"
+			(input)="checkInput()">
+	</div>
+	<div class="panel-footer">
+		<button class="btn btn-primary btn-small"
+			[disabled]="!formData.formValid"
+			(click)="login()">Login</button>
+	</div>
+</div>	
+
+<p>
+  {{loginMessage}}
+</p>
+
