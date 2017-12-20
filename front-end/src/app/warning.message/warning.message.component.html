@@ -1,9 +1,16 @@
 <div class="col-sm-4">
 	<div class="panel panel-warning">
 		<div class="panel-heading">Warning Message</div>
-		<div class="panel-body">This is a warning message</div>
+		<div class="panel-body"
+			*ngIf="displayMessage">This is a warning message</div>
+		<div class="panel-body">
+			<p 
+				*ngFor="let logs of timeLogs; let i = index" 
+				[ngClass]="{'log-plus': currentIndex(i) }">Last clicked: {{ logs.time | date : 'mediumTime' }}</p>
+		</div>
 		<div class="panel-footer">
-			<a class="btn btn-warning btn-small">Confirm</a>
+			<button class="btn btn-warning btn-small" 
+				(click)="toggleDisplay()">Display Details</button>
 		</div>
 	</div>	
 </div>

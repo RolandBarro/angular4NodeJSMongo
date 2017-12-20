@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls:['./warning.message.component.css']
 })
 export class WarningMessageComponent {
+  displayMessage = true;
+  timeLogs = [];
+
   constructor() {}
+
+  toggleDisplay() {
+  	this.timeLogs.push({
+  		time: new Date(),
+  	});
+  	this.displayMessage = !this.displayMessage;
+  }
+  currentIndex(i) {
+  	return i > 4 ? true : false;
+  }
 }

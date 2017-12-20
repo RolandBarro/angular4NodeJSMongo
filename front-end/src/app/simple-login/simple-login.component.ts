@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SimpleLoginComponent implements OnInit {
   loginMessage = '';
+  formData = {
+  	userName: '',
+  	password: '',  	  
+  	formValid: false,	
+  };
 
   constructor() { }
 
